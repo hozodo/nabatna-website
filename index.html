@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nabatna | Leading Fruit & Vegetable Suppliers in Dubai</title>
+<meta name="description" content="Nabatna supplies fresh, high-quality local and imported fruits and vegetables to restaurants and catering companies across Dubai, while supporting local farmers, sustainable production, vertical farming and agro-tech.">
+<style>
+:root{
+  --green:#06672f; --green-d:#04431f; --green-dd:#032d15; --leaf:#4f9a2c; --lime:#b8d94a;
+  --cream:#f7f4ec; --sand:#ece6d6; --ink:#17231b; --muted:#56655a; --orange:#f08c3a; --white:#fff;
+  --serif: "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.1;letter-spacing:-.01em}
+.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--leaf);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor;display:block}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:.98rem;border:2px solid transparent;transition:.2s;cursor:pointer}
+.btn-primary{background:var(--lime);color:var(--green-dd)}
+.btn-primary:hover{background:#c9e85c;transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-dark{background:var(--green);color:#fff}
+.btn-dark:hover{background:var(--green-d);transform:translateY(-2px)}
+
+/* NAV */
+header{position:sticky;top:0;z-index:50;background:rgba(247,244,236,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(6,103,47,.12)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.nav img{height:44px;width:auto}
+.nav ul{display:flex;gap:30px;list-style:none;font-size:.95rem;font-weight:500}
+.nav ul a{padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
+.nav ul a:hover{border-color:var(--leaf);color:var(--green)}
+.nav .btn{padding:10px 22px;font-size:.9rem}
+@media(max-width:900px){.nav ul{display:none}}
+
+/* HERO */
+.hero{background:radial-gradient(1200px 600px at 85% 10%,#0c8a40 0%,transparent 60%),linear-gradient(160deg,var(--green) 0%,var(--green-dd) 100%);color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;left:-5%;right:-5%;bottom:-1px;height:90px;background:var(--cream);border-radius:50% 50% 0 0/100% 100% 0 0}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;padding-top:84px;padding-bottom:150px}
+.hero .eyebrow{color:var(--lime)}
+.hero h1{font-size:clamp(2.5rem,5.4vw,4.4rem);margin-bottom:22px}
+.hero h1 em{font-style:italic;color:var(--lime)}
+.hero p.lead{font-size:1.18rem;color:rgba(255,255,255,.86);max-width:560px;margin-bottom:34px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-art{position:relative;aspect-ratio:1/1;max-width:460px;margin-left:auto;width:100%}
+.hero-art svg{width:100%;height:100%}
+.badge{position:absolute;background:#fff;color:var(--green-dd);border-radius:16px;padding:12px 16px;font-size:.84rem;font-weight:600;box-shadow:0 14px 34px rgba(0,0,0,.25);display:flex;align-items:center;gap:10px}
+.badge i{width:30px;height:30px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font-style:normal;font-size:.95rem}
+.badge.b1{left:-6%;top:12%}
+.badge.b2{right:-3%;bottom:20%}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:56px}.hero-art{margin:0 auto;max-width:340px}.badge.b1{left:0}.badge.b2{right:0}}
+
+/* STRIP */
+.strip{margin-top:-40px;position:relative;z-index:5}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.strip .item{background:#fff;border-radius:18px;padding:22px 24px;box-shadow:0 10px 30px rgba(3,45,21,.08);display:flex;gap:14px;align-items:center}
+.strip .item svg{flex:none;width:34px;height:34px;color:var(--green)}
+.strip .item b{display:block;font-size:.98rem;line-height:1.25}
+.strip .item span{font-size:.83rem;color:var(--muted)}
+@media(max-width:900px){.strip .wrap{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.strip .wrap{grid-template-columns:1fr}}
+
+section{padding:110px 0}
+.sec-head{max-width:720px;margin-bottom:54px}
+.sec-head h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:16px}
+.sec-head p{color:var(--muted);font-size:1.08rem}
+
+/* ABOUT */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:20px}
+.about p{color:var(--muted);margin-bottom:16px;font-size:1.05rem}
+.about .ticks{list-style:none;margin-top:24px;display:grid;gap:12px}
+.about .ticks li{display:flex;gap:12px;align-items:flex-start;font-weight:500}
+.about .ticks svg{flex:none;width:22px;height:22px;color:var(--leaf);margin-top:2px}
+.about-card{background:var(--green);border-radius:28px;padding:44px;color:#fff;position:relative;overflow:hidden}
+.about-card::before{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(184,217,74,.16)}
+.about-card h3{font-size:1.9rem;margin-bottom:14px;position:relative}
+.about-card p{color:rgba(255,255,255,.82);position:relative}
+.about-card .mission{margin-top:26px;padding-top:24px;border-top:1px solid rgba(255,255,255,.2);position:relative}
+.about-card .mission b{color:var(--lime);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:8px}
+@media(max-width:900px){.about .wrap{grid-template-columns:1fr;gap:40px}}
+
+/* PRODUCTS */
+.products{background:var(--sand)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pcard{background:#fff;border-radius:22px;padding:30px 26px;transition:.25s;border:1px solid rgba(6,103,47,.06)}
+.pcard:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(3,45,21,.12)}
+.pcard .ic{width:62px;height:62px;border-radius:18px;display:grid;place-items:center;margin-bottom:20px}
+.pcard .ic svg{width:34px;height:34px}
+.pcard h3{font-size:1.35rem;margin-bottom:8px}
+.pcard p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+.pcard small{display:block;font-size:.82rem;color:var(--green);font-weight:600;line-height:1.5}
+.c1 .ic{background:#fdebd8;color:#d9701a}
+.c2 .ic{background:#e2f0d4;color:#3f8420}
+.c3 .ic{background:#d9f0e2;color:#0a7a3a}
+.c4 .ic{background:#fbe0e0;color:#c4453a}
+@media(max-width:1000px){.grid4{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid4{grid-template-columns:1fr}}
+
+/* SUSTAINABILITY */
+.sustain{background:var(--green-dd);color:#fff;position:relative;overflow:hidden}
+.sustain .eyebrow{color:var(--lime)}
+.sustain .sec-head p{color:rgba(255,255,255,.75)}
+.pillar{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;padding:50px 0;border-top:1px solid rgba(255,255,255,.12)}
+.pillar:first-of-type{border-top:0}
+.pillar.rev .txt{order:2}
+.pillar .num{font-family:var(--serif);font-size:.95rem;color:var(--lime);letter-spacing:.1em;margin-bottom:10px;font-weight:700}
+.pillar h3{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:16px}
+.pillar p{color:rgba(255,255,255,.78);font-size:1.04rem;margin-bottom:14px}
+.pillar ul{list-style:none;display:grid;gap:9px;margin-top:18px}
+.pillar li{padding-left:28px;position:relative;font-size:.97rem;color:rgba(255,255,255,.92)}
+.pillar li::before{content:"";position:absolute;left:0;top:.5em;width:14px;height:8px;border-left:2.5px solid var(--lime);border-bottom:2.5px solid var(--lime);transform:rotate(-45deg) translateY(-3px)}
+.pillar .vis{background:linear-gradient(145deg,#0a5a2b,#06401f);border-radius:28px;aspect-ratio:5/4;display:grid;place-items:center;border:1px solid rgba(255,255,255,.08);overflow:hidden}
+.pillar .vis svg{width:86%;height:86%}
+@media(max-width:900px){.pillar{grid-template-columns:1fr;gap:30px}.pillar.rev .txt{order:0}}
+
+/* HOW */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
+.step{position:relative;padding:30px 26px;background:#fff;border-radius:22px;border:1px solid rgba(6,103,47,.08)}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:var(--serif);font-size:2.6rem;font-weight:700;color:var(--lime);display:block;margin-bottom:8px;-webkit-text-stroke:1px var(--leaf)}
+.step h3{font-size:1.25rem;margin-bottom:8px}
+.step p{color:var(--muted);font-size:.95rem}
+@media(max-width:1000px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* CUSTOMERS */
+.customers{background:#fff}
+.logos{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.logos .lg{height:150px;border:1px solid rgba(6,103,47,.1);border-radius:20px;display:grid;place-items:center;padding:24px;background:var(--cream);transition:.25s}
+.logos .lg:hover{background:#fff;box-shadow:0 14px 30px rgba(3,45,21,.1);transform:translateY(-4px)}
+.logos img{max-height:92px;max-width:100%;object-fit:contain}
+.logos .lg.sq img{max-height:104px;border-radius:10px}
+@media(max-width:900px){.logos{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.logos{grid-template-columns:1fr 1fr}.logos .lg{height:120px;padding:16px}.logos img{max-height:70px}}
+
+/* CTA / CONTACT */
+.contact{background:linear-gradient(160deg,var(--green) 0%,var(--green-dd) 100%);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.contact .eyebrow{color:var(--lime)}
+.contact h2{font-size:clamp(2rem,4vw,3.1rem);margin-bottom:18px}
+.contact p{color:rgba(255,255,255,.82);font-size:1.08rem;margin-bottom:28px;max-width:520px}
+.addr{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:24px;padding:36px}
+.addr h3{font-size:1.4rem;margin-bottom:18px}
+.addr .row{display:flex;gap:14px;margin-bottom:18px}
+.addr .row svg{flex:none;width:24px;height:24px;color:var(--lime);margin-top:3px}
+.addr .row b{display:block;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--lime);margin-bottom:2px}
+@media(max-width:900px){.contact .wrap{grid-template-columns:1fr}}
+
+footer{background:#021f0e;color:rgba(255,255,255,.7);padding:46px 0;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+footer img{height:40px;filter:brightness(0) invert(1);opacity:.92}
+footer nav{display:flex;gap:22px;flex-wrap:wrap}
+footer nav a:hover{color:#fff}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" aria-label="Nabatna home"><img src="assets/logo.png" alt="Nabatna"></a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#sustainability">Sustainability</a></li>
+      <li><a href="#process">How we work</a></li>
+      <li><a href="#customers">Customers</a></li>
+    </ul>
+    <a class="btn btn-dark" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Fruit &amp; Vegetable Suppliers · Dubai</div>
+      <h1>Dubai's leading supplier of <em>fresh</em> fruits &amp; vegetables.</h1>
+      <p class="lead">Nabatna delivers high-quality local and imported produce from trusted sources to restaurants and catering companies, while backing local farmers, sustainable production and the agro-tech shaping the future of food.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#contact">Become a customer</a>
+        <a class="btn btn-ghost" href="#sustainability">Our sustainability commitment</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <circle cx="200" cy="200" r="185" fill="#0d7d3a" opacity=".55"/>
+        <circle cx="200" cy="200" r="140" fill="#0a6a31"/>
+        <!-- leafy greens -->
+        <g transform="translate(200 210)">
+          <path d="M0 90 C-70 60 -95 -20 -40 -85 C-10 -55 0 -20 0 90Z" fill="#4f9a2c"/>
+          <path d="M0 90 C70 60 95 -20 40 -85 C10 -55 0 -20 0 90Z" fill="#6cb53a"/>
+          <path d="M0 90 C-30 40 -20 -60 0 -120 C20 -60 30 40 0 90Z" fill="#b8d94a"/>
+          <path d="M0 90 V-100" stroke="#06672f" stroke-width="3" opacity=".5"/>
+        </g>
+        <!-- orange -->
+        <circle cx="96" cy="296" r="44" fill="#f08c3a"/><circle cx="84" cy="284" r="10" fill="#f8b676" opacity=".7"/>
+        <path d="M96 252 q6-16 20-18 q-2 14-20 18Z" fill="#4f9a2c"/>
+        <!-- tomato -->
+        <circle cx="310" cy="300" r="40" fill="#d9483b"/><circle cx="298" cy="288" r="9" fill="#ee8077" opacity=".7"/>
+        <path d="M310 262 l-12 8 l12 -3 l12 3Z M310 262 l-6-10 M310 262 l6-10" stroke="#4f9a2c" stroke-width="5" stroke-linecap="round" fill="#4f9a2c"/>
+        <!-- carrot -->
+        <g transform="translate(310 110) rotate(35)"><path d="M-14 -40 Q0 -52 14 -40 L0 62Z" fill="#f08c3a"/><path d="M0 -42 l-10-24 M0 -42 l0-28 M0 -42 l10-24" stroke="#4f9a2c" stroke-width="6" stroke-linecap="round"/></g>
+        <!-- lemon -->
+        <ellipse cx="86" cy="118" rx="40" ry="30" transform="rotate(-25 86 118)" fill="#f2d33c"/>
+      </svg>
+      <div class="badge b1"><i>🌱</i>Sustainably sourced</div>
+      <div class="badge b2"><i>🚚</i>Delivered across Dubai</div>
+    </div>
+  </div>
+</div>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="wrap">
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></svg><div><b>Trusted sources</b><span>Vetted farms &amp; suppliers</span></div></div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.5 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.4-6.2"/></svg><div><b>Local first</b><span>Backing UAE growers</span></div></div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="5" rx="1"/><rect x="3" y="10" width="18" height="5" rx="1"/><rect x="3" y="17" width="18" height="4" rx="1"/></svg><div><b>Vertical farming</b><span>Future-ready supply</span></div></div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h4l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/><circle cx="10" cy="21" r="1"/><circle cx="18" cy="21" r="1"/></svg><div><b>Built for food service</b><span>Restaurants &amp; caterers</span></div></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">About Nabatna</div>
+      <h2>Fresh produce you can build a menu on.</h2>
+      <p>Nabatna is a fruit and vegetable trading company serving Dubai's restaurants and catering companies. We source both locally grown and imported produce, always from trusted sources, so your kitchen gets consistent quality, delivered on time.</p>
+      <p>We believe great food starts with how it is grown. That is why supporting local produce and sustainable production sits at the centre of everything we trade.</p>
+      <ul class="ticks">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>High-quality local and imported fruits &amp; vegetables</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Dependable supply for restaurants and catering companies</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Partnerships with growers who farm responsibly</li>
+      </ul>
+    </div>
+    <div class="about-card reveal">
+      <h3>Rooted in the UAE, connected to the world.</h3>
+      <p>From UAE farms to carefully selected international growers, we bring together the best of both so chefs always have what the season, and the menu, calls for.</p>
+      <div class="mission"><b>Our aim</b><p style="margin:0">To support local produce and sustainable production, and to make fresh, responsibly grown food the easy choice for Dubai's food businesses.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">What we supply</div>
+      <h2>Everything your kitchen needs, fresh.</h2>
+      <p>A broad range of fruits and vegetables, both locally grown and imported, selected for quality and consistency.</p>
+    </div>
+    <div class="grid4">
+      <div class="pcard c1 reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="7"/><path d="M12 7c0-2 1-4 4-4-.2 2.2-1.5 3.6-4 4Z"/></svg></div><h3>Fresh Fruits</h3><p>Everyday and seasonal fruits for menus, buffets, juice bars and desserts.</p><small>Citrus · Berries · Tropical · Stone fruit</small></div>
+      <div class="pcard c2 reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c-4-3-6-8-4-13 2-4 4-6 4-7 0 1 2 3 4 7 2 5 0 10-4 13Z"/><path d="M12 22V10"/></svg></div><h3>Vegetables</h3><p>Fresh staples for hot and cold kitchens, graded for consistent size and quality.</p><small>Root · Fruiting · Brassicas · Alliums</small></div>
+      <div class="pcard c3 reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.5 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.4-6.2"/></svg></div><h3>Leafy Greens &amp; Herbs</h3><p>Crisp salad leaves and aromatic herbs, ideal for the freshest plates.</p><small>Lettuce · Rocket · Mint · Basil</small></div>
+      <div class="pcard c4 reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>Local &amp; Imported</h3><p>The best of UAE-grown produce alongside premium imports from trusted origins.</p><small>Local first, imported when needed</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- SUSTAINABILITY -->
+<section class="sustain" id="sustainability">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Growing responsibly</div>
+      <h2>Good food should be good for the future.</h2>
+      <p>Sustainability is not an add-on at Nabatna. It shapes who we buy from, the technologies we back and the way we serve our customers.</p>
+    </div>
+
+    <!-- 1 -->
+    <div class="pillar reveal">
+      <div class="txt">
+        <div class="num">01</div>
+        <h3>Sustainable vegetation &amp; production</h3>
+        <p>We prioritise produce grown with respect for land and water, and we work with suppliers who share that approach. Fewer wasted resources on the farm means better food on your plate.</p>
+        <ul>
+          <li>Preference for responsibly grown produce</li>
+          <li>Efficient sourcing to reduce waste along the chain</li>
+          <li>Long-term relationships with growers who farm sustainably</li>
+        </ul>
+      </div>
+      <div class="vis">
+        <svg viewBox="0 0 400 320" aria-hidden="true">
+          <circle cx="320" cy="60" r="34" fill="#b8d94a" opacity=".9"/>
+          <path d="M0 250 Q100 215 200 240 T400 230 V320 H0Z" fill="#0c7a38"/>
+          <path d="M0 280 Q120 250 220 272 T400 262 V320 H0Z" fill="#06672f"/>
+          <g stroke="#b8d94a" stroke-width="3" stroke-linecap="round" fill="none">
+            <path d="M80 250 v-40"/><path d="M80 225 q-22 -6 -26 -26 q22 0 26 26Z" fill="#6cb53a" stroke="none"/><path d="M80 215 q22 -6 26 -26 q-22 0 -26 26Z" fill="#b8d94a" stroke="none"/>
+            <path d="M160 246 v-62"/><path d="M160 210 q-26 -8 -30 -32 q26 0 30 32Z" fill="#6cb53a" stroke="none"/><path d="M160 192 q26 -8 30 -32 q-26 0 -30 32Z" fill="#b8d94a" stroke="none"/>
+            <path d="M250 244 v-52"/><path d="M250 215 q-24 -8 -28 -30 q24 0 28 30Z" fill="#6cb53a" stroke="none"/><path d="M250 200 q24 -8 28 -30 q-24 0 -28 30Z" fill="#b8d94a" stroke="none"/>
+            <path d="M330 240 v-36"/><path d="M330 222 q-18 -6 -22 -22 q18 0 22 22Z" fill="#6cb53a" stroke="none"/><path d="M330 212 q18 -6 22 -22 q-18 0 -22 22Z" fill="#b8d94a" stroke="none"/>
+          </g>
+          <path d="M60 120 q10 -16 20 0 q-10 14 -20 0Z" fill="#7ec8f0"/><path d="M180 90 q10 -16 20 0 q-10 14 -20 0Z" fill="#7ec8f0" opacity=".8"/><path d="M270 130 q10 -16 20 0 q-10 14 -20 0Z" fill="#7ec8f0" opacity=".7"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="pillar rev reveal">
+      <div class="txt">
+        <div class="num">02</div>
+        <h3>Supporting local farmers</h3>
+        <p>Buying local keeps value in the community, shortens the distance from farm to kitchen and delivers fresher produce. We actively look to UAE growers first and work alongside them to bring their harvests to Dubai's chefs.</p>
+        <ul>
+          <li>Local produce prioritised whenever quality and availability allow</li>
+          <li>A dependable route to market for UAE growers</li>
+          <li>Shorter supply chains and fresher deliveries</li>
+        </ul>
+      </div>
+      <div class="vis">
+        <svg viewBox="0 0 400 320" aria-hidden="true">
+          <rect x="0" y="210" width="400" height="110" fill="#06672f"/>
+          <g fill="none" stroke="#0c8a40" stroke-width="3"><path d="M0 240 H400"/><path d="M0 270 H400"/><path d="M0 300 H400"/></g>
+          <!-- farm building -->
+          <path d="M70 210 V140 L130 100 L190 140 V210Z" fill="#f7f4ec"/><path d="M60 146 L130 94 L200 146" fill="none" stroke="#f08c3a" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/>
+          <rect x="112" y="165" width="36" height="45" rx="3" fill="#06672f"/>
+          <!-- sun -->
+          <circle cx="320" cy="70" r="34" fill="#f2d33c"/>
+          <!-- crates -->
+          <g><rect x="230" y="176" width="70" height="34" rx="4" fill="#c98a4a"/><rect x="236" y="162" width="14" height="14" rx="7" fill="#d9483b"/><rect x="254" y="160" width="14" height="14" rx="7" fill="#d9483b"/><rect x="272" y="162" width="14" height="14" rx="7" fill="#d9483b"/>
+          <rect x="300" y="190" width="70" height="20" rx="4" fill="#c98a4a"/><circle cx="320" cy="184" r="9" fill="#f08c3a"/><circle cx="340" cy="184" r="9" fill="#f08c3a"/><circle cx="356" cy="185" r="8" fill="#f08c3a"/></g>
+          <!-- rows of crops -->
+          <g fill="#b8d94a"><circle cx="40" cy="250" r="9"/><circle cx="90" cy="250" r="9"/><circle cx="140" cy="250" r="9"/><circle cx="190" cy="250" r="9"/><circle cx="240" cy="250" r="9"/><circle cx="290" cy="250" r="9"/><circle cx="340" cy="250" r="9"/>
+          <circle cx="65" cy="282" r="9"/><circle cx="115" cy="282" r="9"/><circle cx="165" cy="282" r="9"/><circle cx="215" cy="282" r="9"/><circle cx="265" cy="282" r="9"/><circle cx="315" cy="282" r="9"/><circle cx="365" cy="282" r="9"/></g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="pillar reveal">
+      <div class="txt">
+        <div class="num">03</div>
+        <h3>Backing vertical farming technology</h3>
+        <p>In a desert climate, growing up instead of out makes sense. Vertical farms grow crops in stacked, controlled-environment layers, using far less land and water and producing right here in the UAE, all year round.</p>
+        <ul>
+          <li>Support for vertical farms as a growing source of local produce</li>
+          <li>Year-round, consistent supply independent of the weather</li>
+          <li>Fresh greens and herbs grown close to Dubai's kitchens</li>
+        </ul>
+      </div>
+      <div class="vis">
+        <svg viewBox="0 0 400 320" aria-hidden="true">
+          <g>
+            <rect x="90" y="30" width="220" height="14" rx="4" fill="#f7f4ec" opacity=".9"/>
+            <rect x="90" y="30" width="6" height="270" fill="#f7f4ec" opacity=".5"/><rect x="304" y="30" width="6" height="270" fill="#f7f4ec" opacity=".5"/>
+            <!-- shelves -->
+            <g fill="#f7f4ec" opacity=".85"><rect x="90" y="104" width="220" height="8" rx="3"/><rect x="90" y="176" width="220" height="8" rx="3"/><rect x="90" y="248" width="220" height="8" rx="3"/><rect x="90" y="296" width="220" height="8" rx="3"/></g>
+            <!-- LED lights -->
+            <g fill="#e8ff7a"><rect x="110" y="48" width="180" height="6" rx="3"/><rect x="110" y="120" width="180" height="6" rx="3"/><rect x="110" y="192" width="180" height="6" rx="3"/><rect x="110" y="264" width="180" height="6" rx="3"/></g>
+            <g opacity=".14" fill="#e8ff7a"><path d="M110 54 L290 54 L320 104 L80 104Z"/><path d="M110 126 L290 126 L320 176 L80 176Z"/><path d="M110 198 L290 198 L320 248 L80 248Z"/></g>
+            <!-- plants -->
+            <g fill="#6cb53a">
+              <g id="row"><path d="M120 104 q-12 -10 -4 -26 q12 8 4 26Z"/><path d="M120 104 q12 -10 4 -26 q-12 8 -4 26Z" fill="#b8d94a"/>
+              <path d="M160 104 q-12 -10 -4 -26 q12 8 4 26Z"/><path d="M160 104 q12 -10 4 -26 q-12 8 -4 26Z" fill="#b8d94a"/>
+              <path d="M200 104 q-12 -10 -4 -26 q12 8 4 26Z"/><path d="M200 104 q12 -10 4 -26 q-12 8 -4 26Z" fill="#b8d94a"/>
+              <path d="M240 104 q-12 -10 -4 -26 q12 8 4 26Z"/><path d="M240 104 q12 -10 4 -26 q-12 8 -4 26Z" fill="#b8d94a"/>
+              <path d="M280 104 q-12 -10 -4 -26 q12 8 4 26Z"/><path d="M280 104 q12 -10 4 -26 q-12 8 -4 26Z" fill="#b8d94a"/></g>
+              <g transform="translate(0 72)"><path d="M120 104 q-12 -10 -4 -26 q12 8 4 26Z"/><path d="M120 104 q12 -10 4 -26 q-12 8 -4 26Z" fill="#b8d94a"/>
+              <path d="M160 104 q-12 -10 -4 -26 q12 8 4 26Z"/><path d="M160 104 q12 -10 4 -26 q-12 8 -4 26Z" fill="#b8d94a"/>
+              <path d="M200 104 q-12 -10 -4 -26 q12 8 4 26Z"/><path d="M200 104 q12 -10 4 -26 q-12 8 -4 26Z" fill="#b8d94a"/>
+              <path d="M240 104 q-12 -10 -4 -26 q12 8 4 26Z"/><path d="M240 104 q12 -10 4 -26 q-12 8 -4 26Z" fill="#b8d94a"/>
+              <path d="M280 104 q-12 -10 -4 -26 q12 8 4 26Z"/><path d="M280 104 q12 -10 4 -26 q-12 8 -4 26Z" fill="#b8d94a"/></g>
+              <g transform="translate(0 144)"><path d="M120 104 q-12 -10 -4 -26 q12 8 4 26Z"/><path d="M120 104 q12 -10 4 -26 q-12 8 -4 26Z" fill="#b8d94a"/>
+              <path d="M160 104 q-12 -10 -4 -26 q12 8 4 26Z"/><path d="M160 104 q12 -10 4 -26 q-12 8 -4 26Z" fill="#b8d94a"/>
+              <path d="M200 104 q-12 -10 -4 -26 q12 8 4 26Z"/><path d="M200 104 q12 -10 4 -26 q-12 8 -4 26Z" fill="#b8d94a"/>
+              <path d="M240 104 q-12 -10 -4 -26 q12 8 4 26Z"/><path d="M240 104 q12 -10 4 -26 q-12 8 -4 26Z" fill="#b8d94a"/>
+              <path d="M280 104 q-12 -10 -4 -26 q12 8 4 26Z"/><path d="M280 104 q12 -10 4 -26 q-12 8 -4 26Z" fill="#b8d94a"/></g>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="pillar rev reveal">
+      <div class="txt">
+        <div class="num">04</div>
+        <h3>Championing agro-tech</h3>
+        <p>Smarter farming means less waste and more reliable harvests. We keep a close eye on agricultural technology and support the innovators using it to make local growing more efficient and resilient.</p>
+        <ul>
+          <li>Hydroponics, controlled-environment and precision agriculture</li>
+          <li>Data-driven growing that saves water and energy</li>
+          <li>Partnerships with agri-tech growers bringing new ideas to market</li>
+        </ul>
+      </div>
+      <div class="vis">
+        <svg viewBox="0 0 400 320" aria-hidden="true">
+          <g fill="none" stroke="#b8d94a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="120" y="120" width="160" height="110" rx="14" fill="#0c7a38" stroke="#f7f4ec"/>
+            <path d="M200 215 v-60"/><path d="M200 185 q-26 -4 -30 -28 q26 0 30 28Z" fill="#6cb53a"/><path d="M200 170 q26 -4 30 -28 q-26 0 -30 28Z" fill="#b8d94a"/>
+            <path d="M140 250 h120" stroke="#7ec8f0"/><path d="M160 268 h80" stroke="#7ec8f0" opacity=".7"/>
+          </g>
+          <!-- sensors / data nodes -->
+          <g stroke="#f7f4ec" stroke-width="2" opacity=".55"><path d="M120 150 L60 90"/><path d="M280 150 L340 90"/><path d="M120 210 L56 250"/><path d="M280 210 L344 250"/></g>
+          <g fill="#e8ff7a"><circle cx="60" cy="90" r="16"/><circle cx="340" cy="90" r="16"/><circle cx="56" cy="250" r="16"/><circle cx="344" cy="250" r="16"/></g>
+          <g stroke="#032d15" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M52 94 l6-10 l6 10"/><path d="M332 92 h16 M340 84 v16"/><path d="M50 250 h12"/><path d="M338 252 l6-8 l6 8"/></g>
+          <g fill="none" stroke="#e8ff7a" stroke-width="2.5" stroke-linecap="round" opacity=".7"><path d="M150 70 q50 -40 100 0"/><path d="M165 88 q35 -28 70 0"/></g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">How we work</div>
+      <h2>From trusted grower to your kitchen.</h2>
+      <p>A simple, reliable process built around freshness and consistency.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Source</h3><p>We work with trusted local farms and carefully selected international suppliers.</p></div>
+      <div class="step reveal"><h3>Select</h3><p>Produce is chosen for freshness, quality and suitability for professional kitchens.</p></div>
+      <div class="step reveal"><h3>Supply</h3><p>Orders are prepared for restaurants and caterers with reliable, scheduled delivery.</p></div>
+      <div class="step reveal"><h3>Support</h3><p>We stay in touch with our customers to match supply to their menus and seasons.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMERS -->
+<section class="customers" id="customers">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Our customers</div>
+      <h2>Trusted by Dubai's food &amp; beverage businesses.</h2>
+      <p>Restaurants, cafés and food brands rely on Nabatna for fresh produce, week after week.</p>
+    </div>
+    <div class="logos">
+      <div class="lg reveal"><img src="assets/customers/the-lounge.png" alt="The Lounge"></div>
+      <div class="lg reveal"><img src="assets/customers/cocolily.png" alt="Cocolily"></div>
+      <div class="lg reveal"><img src="assets/customers/primi.png" alt="Primi"></div>
+      <div class="lg reveal"><img src="assets/customers/noon-minutes.png" alt="Noon Minutes"></div>
+      <div class="lg reveal"><img src="assets/customers/the-fruit-boutique.png" alt="The Fruit Boutique"></div>
+      <div class="lg reveal"><img src="assets/customers/zaytoni.png" alt="Zaytóni"></div>
+      <div class="lg reveal"><img src="assets/customers/roastery-station.png" alt="Roastery Station"></div>
+      <div class="lg reveal"><img src="assets/customers/healthy-patisserie.png" alt="Healthy Patisserie"></div>
+      <div class="lg sq reveal"><img src="assets/customers/mint.png" alt="Mint"></div>
+      <div class="lg sq reveal"><img src="assets/customers/pages-book-cafe.png" alt="Pages Book Café"></div>
+      <div class="lg reveal"><img src="assets/customers/orange.png" alt="Customer logo"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Work with us</div>
+      <h2>Let's supply your kitchen.</h2>
+      <p>Whether you run a restaurant or a catering company, Nabatna can supply the fresh, high-quality local and imported produce your menu depends on.</p>
+      <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Y-12+England+Cluster+International+City+Dubai" target="_blank" rel="noopener">View on map</a>
+    </div>
+    <div class="addr reveal">
+      <h3>Visit or contact us</h3>
+      <div class="row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><b>Address</b>Nabatna Fruits & Vegetables Trading LLC<br>Y-12 England Cluster, International City<br>Dubai, United Arab Emirates</div>
+      </div>
+      <div class="row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div><b>We serve</b>Restaurants &amp; catering companies across Dubai</div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo.png" alt="Nabatna">
+    <nav>
+      <a href="#about">About</a><a href="#products">Products</a><a href="#sustainability">Sustainability</a><a href="#customers">Customers</a><a href="#contact">Contact</a>
+    </nav>
+    <div>© <span id="yr">2026</span> Nabatna Fruits and Vegetables Trading LLC</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  try{document.getElementById('yr').textContent=new Date().getFullYear()}catch(e){}
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
